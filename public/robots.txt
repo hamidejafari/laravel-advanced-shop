@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin
+Disallow: /login
+Disallow: /panel
+Sitemap: http://www.kaajshop.com/sitemap.xml
+
+
+
+

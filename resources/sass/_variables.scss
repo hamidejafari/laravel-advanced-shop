@@ -1,0 +1,84 @@
+// colors
+$bodyone: #efe8e8;
+$bodytwo: rgb(243, 241, 242);
+$one: #f4b19f;
+$two: #000000;
+$bestseller: rgb(206,165,159);
+$popular: rgb(226,179,170);
+$newest: rgb(239,199,191);
+
+
+// var
+$dlay: 0.5s ease-in-out;
+$runded: 1vw;
+
+// table
+.table {
+	--bs-table-bg: transparent;
+	--bs-table-striped-color: #212529;
+	--bs-table-striped-bg: rgba(255, 179, 155, 0.6);
+	--bs-table-active-color: #212529;
+	--bs-table-active-bg: rgba(255, 179, 155, 0.6);
+	--bs-table-hover-color: #212529;
+	--bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+	color: #212529;
+}
+.table-secondary {
+	--bs-table-bg: #ffb39b;
+	--bs-table-striped-bg: #ffb39b;
+	--bs-table-striped-color: #000;
+	--bs-table-active-bg: #ffb39b;
+	--bs-table-active-color: #000;
+	--bs-table-hover-bg: #ffb39b;
+	--bs-table-hover-color: #000;
+	color: #000;
+	border-color: #fff;
+}
+.bi-facebook {
+	color: #415e9b;
+}
+.bi-pinterest {
+	color: #e60023;
+}
+.bi-telegram {
+	color: #32afed;
+}
+.bi-instagram {
+	background: -webkit-linear-gradient(#4762d8, #da2981, #ffd369);
+	background-clip: border-box;
+	background-clip: border-box;
+	background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.bi-whatsapp {
+	color: #4ccb5a;
+}
+.bi-twitter {
+	color: #1da1f2;
+}
+.bi-linkedin {
+	color: #0077b5;
+}
+
+.bi-instagram {
+	transition: 1s;
+	&:hover i {
+		font-size: 6vh;
+		background: -webkit-linear-gradient(rgba(71, 98, 216, 1), rgba(218, 41, 129, 1));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+.bi-whatsapp:hover {
+	color: #4ccb5a !important;
+}
+.bi-telegram:hover {
+	color: #32afed !important;
+}
+.bi-twitter:hover {
+	color: #1da1f2 !important;
+}
+.bi-linkedin:hover {
+	color: #0077b5 !important;
+}

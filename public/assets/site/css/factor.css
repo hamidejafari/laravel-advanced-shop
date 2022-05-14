@@ -1,0 +1,316 @@
+@font-face {
+	font-family: sans;
+	font-weight: 200;
+	font-style: normal;
+	src: url("../fonts/IRANSansWeb(FaNum).ttf");
+	src: url("../fonts/IRANSansWeb(FaNum).eot?#iefix") format("embedded-opentype"),
+		url("../fonts/IRANSansWeb(FaNum).woff") format("woff2"),
+		url("../fonts/IRANSansWeb(FaNum).woff") format("woff"),
+		url("../fonts/IRANSansWeb(FaNum).ttf") format("truetype");
+}
+
+@font-face {
+	font-family: ismb;
+	font-style: normal;
+	src: url("../fonts/fontfamily/ismb.ttf");
+}
+
+@font-face {
+	font-family: barcode;
+	font-weight: 200;
+	font-style: normal;
+	src: url("../fonts/LibreBarcode128-Regular.ttf");
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	max-width: 100%;
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	padding: 0.5cm;
+}
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
+	border-spacing: 0;
+	font-size: 0.75rem;
+}
+
+.header-table {
+	table-layout: fixed;
+	border-spacing: 0;
+}
+
+.header-table td {
+	padding: 0;
+	vertical-align: top;
+	font-size: 0.75rem;
+}
+
+body {
+	font: 9pt sans;
+	direction: rtl;
+}
+
+.print-button {
+	cursor: pointer;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	border-radius: 5px;
+	background: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	position: relative;
+	outline: none;
+	text-align: center;
+	padding: 8px 16px;
+	font-size: 12px;
+	font-size: 0.857rem;
+	line-height: 1.833;
+	font-weight: 700;
+	background-color: green;
+	color: #fff;
+	border: 1px solid green;
+	font-family: sans
+}
+
+.page {
+	background: white;
+	page-break-after: always;
+	width: 95%;
+	margin: 2.5% auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex > * {
+	float: left;
+}
+
+.flex-grow {
+	flex-grow: 10000000;
+}
+
+.barcode {
+	text-align: center;
+	margin: 12px 0 0 0;
+	height: 30px;
+}
+
+.barcode span {
+	font-size: 0.75rem;
+	font-family: "sans";
+}
+
+.portait {
+	transform: rotate(-90deg) translate(0, 40%);
+	text-align: center;
+}
+
+.header-item-wrapper {
+	border: 1px solid #000;
+	width: 100%;
+	height: 100%;
+	background: #eee;
+	display: flex;
+	align-content: center;
+}
+
+thead,
+tfoot {
+	background: #eee;
+}
+
+.header-item-data {
+	height: 100%;
+	width: 100%;
+}
+
+.bordered {
+	border: 1px solid #000;
+	padding: 0.5cm 1cm;
+}
+
+.header-table table {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.content-table {
+	border-collapse: collapse;
+}
+
+.content-table td,
+th {
+	border: 1px solid #000;
+	text-align: center;
+	padding: 0.1cm;
+	font-weight: normal;
+	height: 1.5cm;
+}
+
+table.centered td {
+	vertical-align: middle;
+}
+
+.serials {
+	direction: ltr;
+	text-align: left;
+}
+
+.title {
+	text-align: center;
+}
+
+.grow {
+	width: 100%;
+	height: 100%;
+}
+
+.font-small {
+	font-size: 8pt;
+}
+
+.font-medium {
+	font-size: 10pt;
+}
+
+.font-big {
+	font-size: 15pt;
+}
+
+.label {
+	font-weight: bold;
+	padding: 0 0 0 2px;
+}
+
+@page {
+	/* size: A4 landscape; */
+	margin: 0;
+	margin-bottom: 0.5cm;
+	margin-top: 0.5cm;
+}
+
+.ltr {
+	direction: ltr;
+	display: block;
+}
+
+@media print {
+	.print-button {
+		/* display: none; */
+		visibility: hidden;
+	}
+	.tabledo .yek,.tablese .yek {
+		width: 1cm;
+	}
+	.tabledo .do,.tablese .do {
+		width: 3cm;
+	}
+	.tabledo .se {
+		width: 6cm;
+	}
+	.tabledo .chehar,.tablese .pang {
+		width: 1cm;
+	}
+	.tabledo .pang {
+		width: 3.75cm;
+	}
+	.tabledo .shesh {
+		width: 3.75cm;
+	}
+	.tablese .se {
+		width: 3cm;
+	}
+	.tablese .chehar {
+		width: 3cm;
+	}
+	.tablese .shesh {
+		width: 2.5cm;
+	}
+	.tablese .haft {
+		width: 2.5cm;
+	}
+	.tablese .hasht {
+		width: 2.5cm;
+	}
+}
+td img {
+	background-color: #ddd;
+}
+.bar {
+	font-family: 'Libre Barcode 128', cursive;
+	margin: 0.25rem 0;
+	line-height: 1.5;
+	font-size: 0.95rem;
+	display: inline-block;
+	transform: scale(1.5, 2);
+}
+.nobar {
+	margin: 0.25rem 0;
+	line-height: 1.5;
+	text-align: center;
+}
+.py-2 {
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;
+}
+
+.tabledo .yek,.tablese .yek {
+	width: 1cm;
+}
+.tabledo .do,.tablese .do {
+	width: 3cm;
+}
+.tabledo .se {
+	width: 6cm;
+}
+.tabledo .chehar,.tablese .pang {
+	width: 1cm;
+}
+.tabledo .pang {
+	width: 3.75cm;
+}
+.tabledo .shesh {
+	width: 3.75cm;
+}
+.tablese .se {
+	width: 3cm;
+}
+.tablese .chehar {
+	width: 3cm;
+}
+.tablese .shesh {
+	width: 2.5cm;
+}
+.tablese .haft {
+	width: 2.5cm;
+}
+.tablese .hasht {
+	width: 2.5cm;
+}

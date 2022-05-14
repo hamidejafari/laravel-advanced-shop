@@ -1,0 +1,90 @@
+.brands-home {
+  .owl-carousel-brand {
+    position: relative;
+    .owl-nav {
+      display: block !important;
+      position: unset !important;
+      button {
+        position: absolute;
+        background-color: #fff;
+        top: 30%;
+        margin: 0;
+        padding: 1rem 0.25rem !important;
+        &:hover {
+          background-color: #fff;
+        }
+      }
+      .owl-prev {
+        right: 0;
+        box-shadow: -5px 0px 10px -3px rgba(0, 0, 0, 0.2);
+      }
+      .owl-next {
+        left: 0;    
+        box-shadow: 5px 0px 10px -3px rgba(0, 0, 0, 0.2);  
+      }
+      .disabled {
+        opacity: 1;
+        span {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+.owl-theme {
+  .owl-dots,
+  .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .owl-nav {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    position: initial;
+    left: 0;
+    right: 0;
+    [class*="owl-"] {
+      color: #fff;
+      font-size: 14px;
+      margin: 0px;
+      padding: 4px 7px;
+      background: #d6d6d6;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    [class*="owl-"]:hover {
+      background: transparent;
+      text-decoration: none;
+    }
+    .disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    &.disabled + .owl-dots {
+      margin-top: 10px;
+    }
+  }
+  .owl-dots {
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      span {
+        width: 0.75rem;
+        height: 0.75rem;
+        margin: 5px;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity 0.2s ease;
+        border-radius: 30px;
+        background-color: #dddddd;
+      }
+      &.active span,
+      &:hover span {
+        background: #869791;
+      }
+    }
+  }
+}

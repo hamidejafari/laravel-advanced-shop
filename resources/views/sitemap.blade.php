@@ -1,0 +1,182 @@
+<!--<?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+    <url>
+        <loc>
+            {{url('/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>
+            {{url('/contact-us/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>
+            {{url('/about-us/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>
+            {{url('/faq/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/bestselling/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/discount/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/popular/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/latest/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/incredible-offers/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/privacy-policy/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/brand/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/blogs/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/tracking/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/rules-and-order/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>
+            {{url('/pay/')}}
+        </loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    @foreach($products as $pro)
+        <url>
+            <loc>
+                {{route('site.product.detail',['id'=>$pro->id])}}
+            </loc>
+            <changefreq>daily</changefreq>
+            <priority>0.8</priority>
+        </url>
+    @endforeach
+    @foreach($category as $cat)
+        <url>
+            <loc>
+                {{route('site.product.list',['id'=>$cat->id])}}
+            </loc>
+            <changefreq>daily</changefreq>
+            <priority>0.8</priority>
+        </url>
+    @endforeach
+    @foreach($article_cat as $arcat)
+        <url>
+            <loc>
+                {{route('site.blog.list',['id'=>$arcat->id])}}
+            </loc>
+            <changefreq>daily</changefreq>
+            <priority>0.8</priority>
+        </url>
+    @endforeach
+    @foreach($articles as $art)
+        <url>
+            <loc>
+                {{route('site.blog.detail',['id'=>$art->id])}}
+            </loc>
+            <changefreq>daily</changefreq>
+            <priority>0.8</priority>
+        </url>
+    @endforeach
+    @foreach($brands as $brand)
+        <url>
+            <loc>
+                {{route('site.brand.detail',['id'=>$brand->id])}}
+            </loc>
+            <changefreq>daily</changefreq>
+            <priority>0.8</priority>
+        </url>
+    @endforeach
+
+    @foreach($sliders as $slider)
+        @if($slider->link == null)
+        <url>
+            <loc>
+                {{route('site.banner.detail',['id'=>@$slider['id']])}}
+            </loc>
+            <changefreq>daily</changefreq>
+            <priority>0.8</priority>
+        </url>
+        @endif
+    @endforeach
+    @foreach($tags as $tag)
+        <url>
+            <loc>
+                {{url('/tag/'.str_replace(' ', '-',$tag->title))}}
+            </loc>
+            <changefreq>daily</changefreq>
+            <priority>0.8</priority>
+        </url>
+    @endforeach
+</urlset>
